@@ -1,4 +1,4 @@
-// Comandos de preparação de massa via API (https://automationexercise.com/api_list)
+// Comandos customizados de usuário: preparação e limpeza de massa via API (https://automationexercise.com/api_list)
 // A API responde HTTP 200 com o status real no corpo (texto JSON), por isso validamos o "responseCode".
 
 Cypress.Commands.add('criarUsuarioViaApi', (usuario) => {

@@ -26,7 +26,8 @@ cypress/
     home/ menu/ login/ cadastro/ produtos/ carrinho/ checkout/ pagamento/ rodape/
   dados/          # geração de massa de dados (Faker) e dados fixos dos produtos
   support/
-    commands.js   # comandos customizados de preparação via API
+    commands/
+      usuario.js  # comandos customizados de usuário (criação/exclusão via API)
     e2e.js
 .github/workflows/cypress.yml
 ```
