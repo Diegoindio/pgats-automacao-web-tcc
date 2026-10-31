@@ -17,7 +17,7 @@ describe('Produtos', () => {
   })
 
   it('Test Case 9: Search Product', () => {
-    const termo = 'Top'
+    const termo = 'Jeans'
 
     produtos.buscar(termo)
 

@@ -48,7 +48,7 @@ export function verificarResultadoBusca(termo) {
 }
 
 export function adicionarAoCarrinho(idProduto) {
-  cy.get(`.productinfo [data-product-id="${idProduto}"]`).click()
+  cy.get(`.features_items .productinfo [data-product-id="${idProduto}"]`).click()
   cy.get(seletores.modalCarrinho).should('be.visible').and('contain', 'Your product has been added to cart.')
   cy.get(seletores.continuarComprando).click()
   cy.get(seletores.modalCarrinho).should('not.be.visible')
