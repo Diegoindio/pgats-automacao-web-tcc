@@ -32,3 +32,13 @@ jobs:
           name: relatorio-cypress
           path: cypress/reports
           retention-days: 30
+
+      - name: Debug falhas
+        if: always()
+        run: |
+          node -e '
+          const r=require("./cypress/reports/index.json");
+          const walk=(s,acc)=>{(s.tests||[]).forEach(t=>t.fail&&acc.push(t));(s.suites||[]).forEach(x=>walk(x,acc));return acc};
+          const f=r.results.flatMap(x=>walk(x,[]));
+          f.forEach(t=>console.log("::error title="+t.fullTitle.replace(/[:,]/g," ")+"::"+String(t.err.message).replace(/\n/g," | ").slice(0,900)));
+          '

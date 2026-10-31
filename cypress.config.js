@@ -8,7 +8,8 @@ module.exports = defineConfig({
     charts: true,
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: false
+    saveAllAttempts: false,
+    saveJson: true
   },
   retries: {
     runMode: 2,
