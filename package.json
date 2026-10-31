@@ -1,0 +1,15 @@
+{
+  "name": "pgats-automacao-web-tcc",
+  "version": "1.0.0",
+  "description": "Trabalho de conclusão - Automação Web com Cypress na aplicação Automation Exercise",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "cypress": "^15.21.1",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}
